@@ -17,7 +17,7 @@ class SolutionsController < ApplicationController
   def index
     @task = Task.find(params[:task_id])
   	@users = User.select(:name).distinct.joins(:tasks, :solutions).where(solutions:{completed: true}, tasks:{id: @task})
-    @users3 = User.select(:name).distinct.select(:photo).distinct.joins( :tasks, :solutions).where(solutions:{completed:true}, tasks:{id:@task}).limit(5)
+    @users3 = User.select(:name).select(:photo).distinct.joins(:tasks, :solutions).where(solutions:{completed:true}, tasks:{id:@task}).limit(5)
 
   
   end
