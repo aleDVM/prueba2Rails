@@ -16,10 +16,11 @@
 							<%end%>
 							<%break%>	
 						<%end%>	
-
 								
 					<%end%>	
-							<%= link_to 'No completada', task_solutions_path(task.id), class: "btn btn-danger",  method: :post %>				
+					
+					<%= link_to 'No completada', task_solutions_path(task.id), class: "btn btn-danger",  method: :post %>	
+								
 												
 					<%= link_to 'Detalle tarea',  task_solutions_path(task.id) , class: "btn btn-secondary" %>					
 					
@@ -32,3 +33,4 @@
 	</div>
 
 </div>
+
