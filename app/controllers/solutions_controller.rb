@@ -1,6 +1,6 @@
 class SolutionsController < ApplicationController
 	before_action :authenticate_user!	
-	before_action :tasks_nav, only: [:index,:show]
+	before_action :tasks_nav, only: [:index, :create]
 
   def create
     @task = Task.find(params[:task_id])

@@ -10,7 +10,9 @@
         <a class="nav-link" href="<%=root_path%>">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#">Tareas completadas(<%=@taskC%>/<%=@total%>)</a>
+        <a class="nav-link" href="#">Tareas completadas(<%if @taskC%>
+                                                          <%=@taskC%>
+                                                          <%end%>/<%=@total%>)</a>
       </li>
       <li class="nav-item active">
              <%if user_signed_in?%>

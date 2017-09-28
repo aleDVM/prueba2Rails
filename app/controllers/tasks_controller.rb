@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+    before_action :authenticate_user! 
 	before_action :tasks_nav, only: [:index]
   def index
   	@tasks = Task.all
