@@ -1,0 +1,32 @@
+<div class="container">
+
+	<div class="row">
+	
+	<%= @task.solutions.each do |task|%>
+		<div class="col-md-5 col-md-offset-1">
+		<div class="card">
+			<%= image_tag task.photo, class: 'card-img-top'%>	
+			<div class="card-block">
+				<h3><%= task.title%></h3>
+				<div class="w-100"></div>
+					<%if @solution%>
+						
+						<%= link_to 'Completada', task_solution_path(@task, solution), class: "btn btn-primary", method: :patch %>
+						<%else%>
+						<%= link_to 'No completada', task_solutions_path(task.id), class: "btn btn-danger",  method: :post %>				
+						<%end%>						
+
+					
+				<%= link_to 'Detalle tarea',  task_solutions_path(task.id) , class: "btn btn-default" %>
+				<div class="w-100"></div>
+			</div>
+	
+			</div>
+		
+		</div>
+	
+			<div class="w-100"></div>
+	<% end%>
+	</div>
+
+</div>
