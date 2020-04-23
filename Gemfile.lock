@@ -191,7 +191,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionview (>= 5.1.6.2)
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
